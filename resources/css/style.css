@@ -27,19 +27,16 @@ footer {
   background-color: black;
 }
 
-.logo span {
-  margin: 0.66rem 0.5rem;
-  align-items: center;
-}
 
 .logo .container {
   display: flex;
   align-items: center;
+  padding: 0.66rem 0 0.66rem 0.5rem;
 }
 
 .logo img{
   height: 1.5rem;
-  padding: 0.66rem 0.5rem 0.66rem 0.5rem;
+  padding-right: 1rem;
 }
 
 .banner {
@@ -52,37 +49,43 @@ footer {
 
 .intro {
   width: 20rem;
+  padding: 2rem 3rem;
   position: relative;
   top: 9rem;
-  padding: 2rem 3rem;
+  font-weight: bold;
 }
 
 h4 {
-  padding-bottom: 0.25rem;
   font-size: 1rem;
 }
 
 h1 {
   font-size: 2rem;
+  line-height: 1.2;
+  margin: 0.25rem 0;
 }
 
 nav {
   background-color: firebrick;
 }
 
-nav .container {
+nav ul {
   display: flex;
+  padding: 0.75rem 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li {
-  list-style: none;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  display: block;
 }
 
-ul {
-  justify-content: space-between;
+.mobile-nav {
+  display: none;
 }
+
+
+
 .products,
 .image,
 .contact {
@@ -137,4 +140,70 @@ ul {
 
 footer {
   padding: 5rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .pen,
+  .watch {
+    width: 47%;
+  }
+
+  .glasses {
+    display: none;
+  }
+
+  .contact .place {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  h4 {
+    font-size: 0.77rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .intro {
+    padding: 1rem 2rem;
+    top: 10rem;
+    width: 100%;
+  }
+
+  .banner {
+    height: 15rem;
+  }
+
+  .pen {
+    width: 90%;
+  }
+
+  .watch,
+  .glasses {
+    display: none;
+  }
+
+  .contact .place {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
